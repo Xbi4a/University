@@ -11,13 +11,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    int addThreeForTeamA = 3;
-    int addTooForTeamA = 2;
-    int addOneForTeamA = 1;
 
-    int addThreeForTeamB = 3;
-    int addTooForTeamB = 2;
-    int addOneForTeamB = 1;
+    int scoreTeamA=0;
+    int scoreTeamB=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,28 +28,77 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void increment (View view) {
-        addOneForTeamA = addOneForTeamA + 1;
-        display(addOneForTeamA);
+
+    public void Серт_W (View view) {
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void increment (View view) {
-        addTooForTeamA = addTooForTeamA + 2;
-        display(addTooForTeamA);
+    public void Серт_C (View view) {
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void increment (View view) {
-        addThreeForTeamA = addThreeForTeamA + 3;
-        display(addThreeForTeamA);
+    public void Серт_B (View view) {
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void decrement (View view) {
-        Coffes = Coffes - 1;
-        display(Coffes);
+    public void Серт_B1 (View view) {
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+    public void Серт_A (View view) {
+        scoreTeamA = scoreTeamA +4;
+        displayForTeamA(scoreTeamA);
     }
+
+    public void Серт_A1 (View view) {
+        scoreTeamA = scoreTeamA +4;
+        displayForTeamA(scoreTeamA);
+    }
+
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void Серт_W2 (View view) {
+        scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void Серт_C2 (View view) {
+        scoreTeamB = scoreTeamB + 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void Серт_B2 (View view) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void Серт_B21 (View view) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void Серт_A2 (View view) {
+        scoreTeamB = scoreTeamB +4;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void Серт_A21 (View view) {
+        scoreTeamB = scoreTeamB +4;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void resetScore(View v) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
 }
